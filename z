@@ -1,39 +1,54 @@
-getgenv().config = {
-    ["Team"] = "Pirates",
-    ["Use Race"] = {
-        ["V3"] = true,
-        ["V4"] = true
+getgenv().Setting = {
+    ["Team"] = "Pirates", --Marines,Pirates
+    ["Webhook"] = {
+        ["Enabled"] = true,
+        ["Url Webhook"] = "", --Your Url
     },
-    ["Info Screen"] = true,
+    ["Misc"] = {
+        ["AutoBuyRandomandStoreFruit"] = true,
+        ["AutoBuySurprise"] = true,
+    },
+    ["Click"] = {
+        ["Enable"] = true,
+        ["Click Gun"] = true,
+        ["OnLowHealthDisable"] = true,
+        ["LowHealth"] = 4500,
+    },
+    ["SafeZone"] = {
+        ["Enable"] = true,
+        ["LowHealth"] = 4500,
+        ["MaxHealth"] = 5000,
+        ["Teleport Y"] = 2000
+    },
+    ["Race V4"] = {
+        ["Enable"] = true,
+    },
+    ["Invisible"] = false,
     ["White Screen"] = false,
-    ["BypassTp"] = true,
-    ["SkipFruit"] = {
-        "Portal-Portal"
-    },
-    ["Skip Race V4 User"] = true,
-    ["MainSkillToggle"] = {
+    ["GunMethod"] = false, --Support Only Melee And Gun,Not Invisible, Turn On Enabled Gun and Melee Please
+    ["SpamSkill"] = false, -- Will use all skills as fast as possbile ignore holding skills
+    ["Weapons"] = {
         ["Melee"] = {
             ["Enable"] = true,
-            ["Delay"] = 1.75,
+            ["Delay"] = 3,
             ["Skills"] = {
                 ["Z"] = {
                     ["Enable"] = true,
-                    ["HoldTime"] = 1.5,
+                    ["HoldTime"] = 0.2,
                 },
-                [ "X"] = {
+               [ "X"] = {
                     ["Enable"] = true,
-                    ["HoldTime"] = 0,
+                    ["HoldTime"] = 0.1,
                 },
-
                 ["C"] = {
                     ["Enable"] = true,
-                    ["HoldTime"] = 0,
+                    ["HoldTime"] = 2,
                 },
             },
         },
         ["Blox Fruit"] = {
             ["Enable"] = false,
-            ["Delay"] = 2,
+            ["Delay"] = 1,
             ["Skills"] = {
                 ["Z"] = {
                     ["Enable"] = true,
@@ -41,14 +56,14 @@ getgenv().config = {
                 },
                 ["X"] = {
                     ["Enable"] = true,
-                    ["HoldTime"] = 2,
+                    ["HoldTime"] = 0,
                 },
                 ["C"] = {
-                    ["Enable"] = false,
+                    ["Enable"] = true,
                     ["HoldTime"] = 0,
                 },
                 ["V"] = {
-                    ["Enable"] = false,
+                    ["Enable"] = true,
                     ["HoldTime"] = 0,
                 },
                 ["F"] = {
@@ -58,16 +73,16 @@ getgenv().config = {
             },
         },
         ["Gun"] = {
-            ["Enable"] = true,
-            ["Delay"] = 1,
+            ["Enable"] = false,
+            ["Delay"] = 2,
             ["Skills"] = {
                 ["Z"] = {
                     ["Enable"] = true,
-                    ["HoldTime"] = 0,
+                    ["HoldTime"] = 0.7,
                 },
                 ["X"] = {
                     ["Enable"] = true,
-                    ["HoldTime"] = 0,
+                    ["HoldTime"] = 0.7,
                 },
             },
         },
@@ -77,21 +92,15 @@ getgenv().config = {
             ["Skills"] = {
                 ["Z"] = {
                     ["Enable"] = true,
-                    ["HoldTime"] = 0,
+                    ["HoldTime"] = 1.5,
                 },
                 ["X"] = {
                     ["Enable"] = true,
-                    ["HoldTime"] = 0,
+                    ["HoldTime"] = 0.5,
                 },
             },
-        }
-    },
-    ["Webhooks"] = {
-        ["Link Webhook"] = "",
-        ["Toggle Webhook"] = true
-    },
-    ["MinBountyHunt"] = 0,
-    ["MaxBountyHunt"] = 30000000,
-    ["SafeHealth"] = 4000
+        },
+    }
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LumosSera/SeraHub/main/AutoBounty.lua"))()
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BountyShit.lua"))()
